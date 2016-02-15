@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/base_content"
+        android:background="?attr/colorPrimaryDark"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            android:elevation="4dp"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"/>
+        <FrameLayout
+            android:foregroundGravity="center"
+            android:layout_gravity="center"
+            android:background="@android:color/white"
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <com.haoxuan.worknote.widget.HeadRecyclerView
+        android:fitsSystemWindows="true"
+        android:id="@+id/menu_list"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left" />
+</android.support.v4.widget.DrawerLayout>
